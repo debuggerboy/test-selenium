@@ -11,6 +11,3 @@ public class LaunchChrome {
         System.out.println(driver.getTitle());
     }
 }
-
-
-inat
