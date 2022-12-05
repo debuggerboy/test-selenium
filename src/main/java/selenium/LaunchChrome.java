@@ -5,14 +5,30 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LaunchChrome {
-    public static void main(string[] args) throws IOException, InterruptedException {
+
+    static WebDriver driver;
+
+    public static void main(String[] args) {
+        launchChrome();
+        runTest();
+    }
+
+    public static void launchChrome() {
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--headless");
-        chromeOptions.addArguments("--window-size=1200x600");
         chromeOptions.addArguments("--no-sandbox");
-        WebDriver driver = new ChromeDriver(chromeOptions);
+        driver = new ChromeDriver();
         driver.get ("https://www.google.com");
+
+        //Maximize the window and delete all Cookies. Also set up a counter
+        driver.manage().window().maximize();
+        driver.manage().deleteAllCookies();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        System.out.println(driver.getTitle());
+    }
+
+    public static void runTest() {
         System.out.println(driver.getTitle());
     }
 }
