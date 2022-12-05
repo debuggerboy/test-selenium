@@ -1,7 +1,7 @@
 package selenium;
 
-import or.openqa.selenium.WebDriver;
-import or.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LaunchChrome {
     public static void main(string[] args) throws IOException, InterruptedException {
