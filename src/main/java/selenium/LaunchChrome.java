@@ -3,8 +3,7 @@ package selenium;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-//public class LaunchChrome {
-public class launchChrome {
+public class LaunchChrome {
     public static void main(string[] args) throws IOException, InterruptedException {
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         ChromeOptions chromeOptions = new ChromeOptions();
