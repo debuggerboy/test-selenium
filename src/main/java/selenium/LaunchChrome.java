@@ -16,9 +16,9 @@ public class LaunchChrome {
 
     public static void launchChrome() {
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-        #ChromeOptions chromeOptions = new ChromeOptions();
-        #chromeOptions.addArguments("--headless");
-        #chromeOptions.addArguments("--no-sandbox");
+        //ChromeOptions chromeOptions = new ChromeOptions();
+        //chromeOptions.addArguments("--headless");
+        //chromeOptions.addArguments("--no-sandbox");
         driver = new ChromeDriver();
         driver.get ("https://www.google.com");
 
